@@ -6,7 +6,7 @@ dispatcher = updater.dispatcher
 def startCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Привет, давай пообщаемся?')
 def textMessage(bot, update):
-    request = apiai.ApiAI('4b89cdb6c8b94e568117a949cd938a5e').text_request() # Токен API к Dialogflow
+    request = apiai.ApiAI('4a6d212e347b41498df38535311f7621').text_request() # Токен API к Dialogflow
     request.lang = 'ru' # На каком языке будет послан запрос
     request.session_id = 'BatlabAIBot' # ID Сессии диалога (нужно, чтобы потом учить бота)
     request.query = update.message.text # Посылаем запрос к ИИ с сообщением от юзера
